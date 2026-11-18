@@ -31,6 +31,37 @@ because all resources end up in the same Omeka S instance.
 
 ---
 
+## ETL architecture 
+
+```mermaid
+flowchart LR
+    subgraph EXTRACT["Extract"]
+        E1["APOD"]
+        E2["NASA Science"]
+        E3["YouTube"]
+    end
+
+    subgraph TRANSFORM["Transform"]
+        T1["APOD transform"]
+        T2["NASA Science transform"]
+        T3["YouTube transform"]
+    end
+
+    subgraph LOAD["Load"]
+        L["Omeka S API"]
+    end
+
+    E1 --> T1
+    E2 --> T2
+    E3 --> T3
+
+    T1 --> L
+    T2 --> L
+    T3 --> L
+
+    L --> O[("Omeka S")]
+```
+
 ## Project structure
 
 ```
