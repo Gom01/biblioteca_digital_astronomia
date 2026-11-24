@@ -1,0 +1,81 @@
+{
+  "kind": "youtube#video",
+  "etag": string,
+  "id": string,
+  "snippet": {
+    "publishedAt": datetime,
+    "channelId": string,
+    "title": string,
+    "description": string,
+    "thumbnails": {
+      (key): {                               // "default" | "medium" | "high" | "standard" | "maxres" | ...
+        "url": string,
+        "width": integer,
+        "height": integer
+      }
+    },
+    "channelTitle": string,
+    "tags": [string],                        // optional
+    "categoryId": string,
+    "liveBroadcastContent": string,          // "none" | "live" | "upcoming"
+    "defaultLanguage": string,               // optional
+    "localized": {
+      "title": string,
+      "description": string
+    },
+    "defaultAudioLanguage": string           // optional
+  },
+  "contentDetails": {
+    "duration": string,                      // ISO 8601, e.g. "PT1H1M45S"
+    "dimension": string,                     // "2d" | "3d"
+    "definition": string,                    // "hd" | "sd"
+    "caption": string,                       // "true" | "false"
+    "licensedContent": boolean,
+    "regionRestriction": {                   // optional
+      "allowed": [string],
+      "blocked": [string]
+    },
+    "contentRating": {},                     // usually empty
+    "projection": string                     // "rectangular" | "360"
+  },
+  "status": {
+    "uploadStatus": string,
+    "privacyStatus": string,                 // "public" | "unlisted" | "private"
+    "license": string,                       // "youtube" | "creativeCommon"
+    "embeddable": boolean,
+    "publicStatsViewable": boolean,
+    "madeForKids": boolean
+  },
+  "statistics": {
+    "viewCount": string,
+    "likeCount": string,
+    "favoriteCount": string,
+    "commentCount": string                   // optional
+  },
+  "player": {
+    "embedHtml": string
+  },
+  "topicDetails": {                          // optional
+    "topicCategories": [string]              // Wikipedia URLs
+  },
+  "recordingDetails": {
+    "recordingDate": datetime                // optional
+  },
+  "liveStreamingDetails": {                  // optional (past live streams only)
+    "actualStartTime": datetime,
+    "actualEndTime": datetime,
+    "scheduledStartTime": datetime,
+    "scheduledEndTime": datetime,            // optional
+    "concurrentViewers": integer,            // only during a live stream
+    "activeLiveChatId": string               // only during a live stream
+  },
+  "localizations": {
+    (key): {                                 // language code, e.g. "es-US"
+      "title": string,
+      "description": string
+    }
+  },
+  "paidProductPlacementDetails": {
+    "hasPaidProductPlacement": boolean
+  }
+}

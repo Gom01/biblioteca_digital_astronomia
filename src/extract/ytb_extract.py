@@ -1,8 +1,9 @@
-import json
 import os
 
 import requests
 from dotenv import load_dotenv
+
+from utils import save_to_json
 
 load_dotenv()
 
@@ -11,9 +12,14 @@ if YT_API_KEY is None:
     raise RuntimeError("YT_API_KEY is missing from the .env file")
 
 YT_API_URL = "https://www.googleapis.com/youtube/v3"
-CHANNEL_ID = "UCLA_DiR1FfKNvjuUpBHmylQ"
-UPLOADS_PLAYLIST_ID = "UU" + CHANNEL_ID[2:]
-MAX_PER_REQUEST = 50 # 50 videos max with youtube
+CHANNEL_ID = "UCLA_DiR1FfKNvjuUpBHmylQ"  # NASA's official YouTube channel ID
+UPLOADS_PLAYLIST_ID = "UU" + CHANNEL_ID[2:]  # "Uploads" playlist = all channel videos
+MAX_PER_REQUEST = 50  # YouTube API limit per request
+VIDEO_PARTS = (
+    "id,snippet,contentDetails,status,statistics,topicDetails,"
+    "player,recordingDetails,localizations,liveStreamingDetails,"
+    "paidProductPlacementDetails"
+)
 
 
 def get_video_ids(playlist_id: str, max_results: int = 50) -> list[str]:
@@ -48,9 +54,9 @@ def get_videos_details(video_ids: list[str]) -> list[dict]:
     raw_videos: list[dict] = []
 
     for start in range(0, len(video_ids), MAX_PER_REQUEST):
-        batch = video_ids[start:start + MAX_PER_REQUEST]
+        batch = video_ids[start : start + MAX_PER_REQUEST]
         params: dict[str, str | int] = {
-            "part": "snippet,contentDetails,status,topicDetails",
+            "part": VIDEO_PARTS,
             "id": ",".join(batch),
             "key": YT_API_KEY,
         }
@@ -61,44 +67,11 @@ def get_videos_details(video_ids: list[str]) -> list[dict]:
     return raw_videos
 
 
-def parse_video(video: dict) -> dict:
-    """Keep only the useful metadata of a raw YouTube video."""
-    snippet = video["snippet"]
-    details = video.get("contentDetails", {})
-    status = video.get("status", {})
-    topics = video.get("topicDetails", {})
-
-    return {
-        "id": video["id"],
-        "title": snippet["title"],
-        "description": snippet.get("description", ""),
-        "date": snippet["publishedAt"][:10],
-        "channel": snippet.get("channelTitle", ""),
-        "language": snippet.get("defaultLanguage", "en"),
-        "tags": snippet.get("tags", []),
-        "duration": details.get("duration", ""),
-        "captions": details.get("caption") == "true",
-        "license": status.get("license", ""),
-        "embeddable": status.get("embeddable", True),
-        "categories": topics.get("topicCategories", []),
-        "url": "https://www.youtube.com/watch?v=" + video["id"],
-    }
-
-
-def save_to_json(data: list[dict], filename: str) -> None:
-    """Save a list of dictionaries to a JSON file."""
-    with open(filename, "w", encoding="utf-8") as file:
-        json.dump(data, file, ensure_ascii=False, indent=2)
-
-
-def extract_youtube(max_results: int = 50, filename: str = "youtube_videos.json") -> list[dict]:
-    """Return the latest videos of the NASA channel and save them to a JSON file."""
+def extract_youtube(
+    max_results: int = 50, filename: str = "data/raw/youtube_raw.json"
+) -> list[dict]:
+    """Return the raw data of the latest NASA videos and save it to a JSON file."""
     video_ids = get_video_ids(UPLOADS_PLAYLIST_ID, max_results)
     raw_videos = get_videos_details(video_ids)
-
-    videos = []
-    for raw_video in raw_videos:
-        videos.append(parse_video(raw_video))
-
-    save_to_json(videos, filename)
-    return videos
+    save_to_json(raw_videos, filename)
+    return raw_videos
