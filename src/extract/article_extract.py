@@ -1,8 +1,9 @@
 import html
-import json
 
 import requests
 from bs4 import BeautifulSoup
+
+from utils import save_to_json
 
 NASA_API_URL = "https://science.nasa.gov/wp-json/wp/v2/posts"
 MAX_PER_REQUEST = 10  # Tamaño estándar cacheado por el servidor de NASA
@@ -26,10 +27,7 @@ def is_outreach_article(article: dict) -> bool:
     has_table = soup.find("table") is not None
     paragraphs = soup.find_all("p", class_="wp-block-paragraph")
 
-    if has_table and len(paragraphs) < 3:
-        return False
-
-    return True
+    return not (has_table and len(paragraphs) < 3)
 
 
 def get_valid_raw_articles(max_results: int = 50) -> list[dict]:
@@ -101,13 +99,6 @@ def parse_article(article: dict) -> dict:
         "image_url": article.get("featured_image_url", ""),
         "url": article.get("link", ""),
     }
-
-
-def save_to_json(data: list[dict], filename: str) -> None:
-    """Save a list of dictionaries to a JSON file."""
-    with open(filename, "w", encoding="utf-8") as file:
-        json.dump(data, file, ensure_ascii=False, indent=2)
-
 
 def extract_nasa_articles(max_results: int = 50, filename: str = "nasa_articles.json") -> list[dict]:
     """Return the latest outreach articles from science.nasa.gov and save them to a JSON file."""

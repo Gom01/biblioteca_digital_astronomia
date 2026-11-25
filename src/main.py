@@ -8,17 +8,15 @@ YOUTUBE_TRANSFORMED = "data/intermediate/youtube.json"
 
 if __name__ == "__main__":
     print("Starting extraction...")
-    raw_videos = extract_youtube(500, YOUTUBE_RAW)
-    print(f"Extraction completed: {len(raw_videos)} videos saved to {YOUTUBE_RAW}")
+    raw_videos = extract_youtube(40, YOUTUBE_RAW)
+    articles = extract_nasa_articles(100, ARTICLES_RAW)
+    print(f"Extraction completed: {len(raw_videos)} videos and {len(articles)} articles saved to {YOUTUBE_RAW}")
 
     print("Starting transformation...")
     videos = transform_youtube(YOUTUBE_RAW, YOUTUBE_TRANSFORMED)
     print(
         f"Transformation completed: {len(videos)} videos saved to {YOUTUBE_TRANSFORMED}")
     print("Starting extraction...")
-
-    articles = extract_nasa_articles(50, ARTICLES_RAW)
-    print(f"Extraction completed: {len(articles)} articles extracted")
 
 
 
