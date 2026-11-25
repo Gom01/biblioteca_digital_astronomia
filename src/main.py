@@ -1,7 +1,9 @@
+from extract.article_extract import extract_nasa_articles
 from extract.ytb_extract import extract_youtube
 from transform.ytb_transform import transform_youtube
 
 YOUTUBE_RAW = "data/raw/youtube_raw.json"
+ARTICLES_RAW = "data/raw/extracted_articles.json"
 YOUTUBE_TRANSFORMED = "data/transformed/youtube.json"
 
 if __name__ == "__main__":
@@ -12,5 +14,11 @@ if __name__ == "__main__":
     print("Starting transformation...")
     videos = transform_youtube(YOUTUBE_RAW, YOUTUBE_TRANSFORMED)
     print(
-        f"Transformation completed: {len(videos)} videos saved to {YOUTUBE_TRANSFORMED}"
-    )
+        f"Transformation completed: {len(videos)} videos saved to {YOUTUBE_TRANSFORMED}")
+    print("Starting extraction...")
+
+    articles = extract_nasa_articles(50, ARTICLES_RAW)
+    print(f"Extraction completed: {len(articles)} articles extracted")
+
+
+
