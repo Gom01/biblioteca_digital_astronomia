@@ -1,8 +1,8 @@
 from extract.ytb_extract import extract_youtube
-from transform.ytb_transform import transform_youtube
+from transform.ytb_intermediate import transform_youtube
 
 YOUTUBE_RAW = "data/raw/youtube_raw.json"
-YOUTUBE_TRANSFORMED = "data/transformed/youtube.json"
+YOUTUBE_TRANSFORMED = "data/intermediate/youtube.json"
 
 if __name__ == "__main__":
     print("Starting extraction...")
