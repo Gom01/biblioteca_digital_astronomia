@@ -81,7 +81,6 @@ biblioteca_digital_astronomia/
 │   ├── raw/                    # Untouched API responses
 │   ├── intermediate/           # Cleaned data per source
 │   └── final/                  # Common format, ready for Omeka
-├── docs/
 ├── .env                        # API keys (not versioned)
 ├── .gitignore
 ├── pyproject.toml

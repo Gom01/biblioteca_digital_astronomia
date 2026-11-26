@@ -8,9 +8,6 @@ from utils import save_to_json
 load_dotenv()
 
 YT_API_KEY = os.getenv("YT_API_KEY", "")
-if not YT_API_KEY:
-    raise RuntimeError("YT_API_KEY is missing from the .env file")
-
 YT_API_URL = "https://www.googleapis.com/youtube/v3"
 CHANNEL_ID = "UCLA_DiR1FfKNvjuUpBHmylQ"  # NASA's official YouTube channel ID
 UPLOADS_PLAYLIST_ID = "UU" + CHANNEL_ID[2:]  # "Uploads" playlist = all channel videos
@@ -53,6 +50,8 @@ def get_videos_details(video_ids: list[str]) -> list[dict]:
 
 def extract_youtube(max_results: int, filename: str) -> list[dict]:
     """Return the raw data of the latest NASA videos and save it to a JSON file."""
+    if not YT_API_KEY:
+        raise RuntimeError("YT_API_KEY is missing from the .env file")
     if not 1 <= max_results <= MAX_RESULTS:
         raise ValueError(f"max_results must be between 1 and {MAX_RESULTS}")
 
