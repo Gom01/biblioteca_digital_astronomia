@@ -20,46 +20,34 @@ source, and is annotated with the [Unified Astronomy Thesaurus (UAT)](https://as
 
 The repository is filled automatically by an **ETL** pipeline (Extract → Transform → Load):
 
-| Step | What it does |
-|---|---|
-| **Extract** | Retrieves the resources and their metadata from each source (APIs) |
-| **Transform** | Cleans the data, maps it to Dublin Core fields and adds UAT subjects |
-| **Load** | Creates the items in Omeka S through its REST API |
+| Step | What it does | Output |
+|---|---|---|
+| **Extract** | Retrieves the resources from each source (APIs) and saves the response untouched | `data/raw/` |
+| **Transform** (1) | Filters and cleans the data of each source | `data/intermediate/` |
+| **Transform** (2) | Maps every source to the same final format (Dublin Core + UAT subjects) | `data/final/` |
+| **Load** | Creates the items in Omeka S through its REST API | Omeka S |
 
-Each source has its own *extract* and *transform* script. The *load* step is shared,
-because all resources end up in the same Omeka S instance.
+Each source has its own *extract* and *transform* script, and the same file name at
+every step (e.g. `data/raw/youtube.json` → `data/intermediate/youtube.json` →
+`data/final/youtube.json`). The *load* step is shared, because all sources end in the
+same final format.
 
 ---
 
-## ETL architecture 
+## ETL architecture
 
 ```mermaid
 flowchart LR
-    subgraph EXTRACT["Extract"]
-        E1["APOD"]
-        E2["NASA Science"]
-        E3["YouTube"]
+    subgraph SOURCES["Sources"]
+        S1["APOD"]
+        S2["NASA Science"]
+        S3["YouTube"]
     end
 
-    subgraph TRANSFORM["Transform"]
-        T1["APOD transform"]
-        T2["NASA Science transform"]
-        T3["YouTube transform"]
-    end
-
-    subgraph LOAD["Load"]
-        L["Omeka S API"]
-    end
-
-    E1 --> T1
-    E2 --> T2
-    E3 --> T3
-
-    T1 --> L
-    T2 --> L
-    T3 --> L
-
-    L --> O[("Omeka S")]
+    SOURCES -->|Extract| R[("data/raw<br/>untouched API responses")]
+    R -->|"Transform<br/>filter + clean"| I[("data/intermediate<br/>cleaned data per source")]
+    I -->|"Transform<br/>common format"| F[("data/final<br/>Dublin Core + UAT")]
+    F -->|Load| O[("Omeka S")]
 ```
 
 ## Project structure
@@ -73,8 +61,9 @@ biblioteca_digital_astronomia/
 │   │   ├── youtube.py          # YouTube (@NASA channel)
 │   │   ├── nasa_science.py     # NASA Science
 │   │   └── apod.py             # APOD (planned)
-│   ├── transform/              # One file per source + UAT annotation
-│   │   └── youtube.py
+│   ├── transform/              # One file per source (raw → intermediate → final)
+│   │   ├── youtube.py
+│   │   └── nasa_science.py
 │   └── load/
 │       └── omeka.py            # Sends items to Omeka S (planned)
 ├── data/
