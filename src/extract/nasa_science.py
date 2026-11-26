@@ -7,9 +7,7 @@ from utils import save_to_json
 
 NASA_API_URL = "https://science.nasa.gov/wp-json/wp/v2/posts"
 MAX_PER_REQUEST = 10  # Tamaño estándar cacheado por el servidor de NASA
-HEADERS = {
-    "User-Agent": "Mozilla/5.0 (compatible; NASAScienceCollector/1.0)"
-}
+HEADERS = {"User-Agent": "Mozilla/5.0 (compatible; NASAScienceCollector/1.0)"}
 
 
 def is_outreach_article(article: dict) -> bool:
@@ -40,7 +38,9 @@ def get_valid_raw_articles(max_results: int = 50) -> list[dict]:
             "per_page": MAX_PER_REQUEST,
             "page": page,
         }
-        response = requests.get(NASA_API_URL, params=params, headers=HEADERS, timeout=15)
+        response = requests.get(
+            NASA_API_URL, params=params, headers=HEADERS, timeout=15
+        )
         if response.status_code in (400, 403):
             break
         response.raise_for_status()
@@ -89,7 +89,9 @@ def parse_article(article: dict) -> dict:
         "id": str(article["id"]),
         "title": clean_html(title),
         "summary": clean_html(article.get("excerpt", {}).get("rendered", "")),
-        "content": clean_html(article.get("content", {}).get("rendered", ""), remove_nasa_blocks=True),
+        "content": clean_html(
+            article.get("content", {}).get("rendered", ""), remove_nasa_blocks=True
+        ),
         "date": article.get("date", "")[:10],
         "author": html.unescape(author_name),
         "language": article.get("meta", {}).get("nasa_hds_core_meta_l10n", "en-US"),
@@ -100,7 +102,8 @@ def parse_article(article: dict) -> dict:
         "url": article.get("link", ""),
     }
 
-def extract_nasa_articles(max_results: int = 50, filename: str = "nasa_articles.json") -> list[dict]:
+
+def extract_nasa_science(max_results: int, filename: str) -> list[dict]:
     """Return the latest outreach articles from science.nasa.gov and save them to a JSON file."""
     raw_articles = get_valid_raw_articles(max_results)
     articles = [parse_article(raw) for raw in raw_articles]

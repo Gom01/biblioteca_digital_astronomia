@@ -11,3 +11,6 @@ __pycache__/
 .vscode/
 .DS_Store
 Thumbs.db
+Claude.md
+CLAUDE.md
+.claude/

@@ -68,18 +68,20 @@ flowchart LR
 biblioteca_digital_astronomia/
 ├── src/
 │   ├── main.py                 # Entry point: runs the whole ETL
-│   ├── extract/
-│   │   ├── __init__.py
-│   │   ├── ytb_extract.py      # YouTube (@NASA channel)
-│   │   ├── apod_extract.py     # APOD (planned)
-│   │   └── nasa_science_extract.py  # NASA Science (planned)
-│   ├── transform/
-│   │   ├── __init__.py
-│   │   └── ...                 # One transform script per source + UAT annotation
+│   ├── utils.py                # JSON helpers
+│   ├── extract/                # One file per source (raw API responses)
+│   │   ├── youtube.py          # YouTube (@NASA channel)
+│   │   ├── nasa_science.py     # NASA Science
+│   │   └── apod.py             # APOD (planned)
+│   ├── transform/              # One file per source + UAT annotation
+│   │   └── youtube.py
 │   └── load/
-│       ├── __init__.py
-│       └── omeka_load.py       # Sends items to Omeka S (planned)
-├── data/                       # Generated JSON files (not versioned)
+│       └── omeka.py            # Sends items to Omeka S (planned)
+├── data/
+│   ├── raw/                    # Untouched API responses
+│   ├── intermediate/           # Cleaned data per source
+│   └── final/                  # Common format, ready for Omeka
+├── docs/
 ├── .env                        # API keys (not versioned)
 ├── .gitignore
 ├── pyproject.toml

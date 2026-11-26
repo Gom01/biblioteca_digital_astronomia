@@ -6,6 +6,7 @@ from utils import load_json, save_to_json
 YOUTUBE_WATCH_URL = "https://www.youtube.com/watch?v="
 YOUTUBE_CHANNEL_URL = "https://www.youtube.com/channel/"
 RIGHTS = "Standard YouTube License – Credit: NASA"
+WIKIPEDIA_PREFIX = "https://en.wikipedia.org/wiki/"
 
 
 def is_valid(video: dict) -> bool:
@@ -31,8 +32,8 @@ def format_duration(iso_duration: str) -> str:
     return f"{hours}:{minutes:02d}:{seconds:02d}"
 
 
-def transform_video(video: dict) -> dict:
-    """Transform one raw YouTube video into the common format used by the Load step."""
+def to_intermediate(video: dict) -> dict:
+    """Convert one raw YouTube video into the intermediate YouTube format."""
     snippet = video["snippet"]
     details = video.get("contentDetails", {})
     statistics = video.get("statistics", {})
@@ -69,17 +70,43 @@ def transform_video(video: dict) -> dict:
     }
 
 
-def transform_youtube(
-    input_file: str = "data/raw/youtube_raw.json",
-    output_file: str = "data/transformed/youtube.json",
-) -> list[dict]:
-    """TRANSFORM: filter the raw videos, convert them to the common format and save them."""
-    raw_videos = load_json(input_file)
+def get_subjects(video: dict) -> list[dict]:
+    """Return the subjects of a video: UAT terms + YouTube topics (Wikipedia)."""
+    subjects = list(video.get("subjects", []))
+    for topic_url in video.get("topics", []):
+        label = topic_url.removeprefix(WIKIPEDIA_PREFIX).replace("_", " ")
+        subjects.append({"label": label, "uri": topic_url})
+    return subjects
 
-    videos = []
-    for raw_video in raw_videos:
-        if is_valid(raw_video):
-            videos.append(transform_video(raw_video))
 
+def to_final(video: dict) -> dict:
+    """Convert one intermediate YouTube video into the final common format."""
+    return {
+        "identifier": video["identifier"],
+        "class": video["class"],
+        "title": video["title"],
+        "description": video["description"],
+        "date": video["date_created"] or video["date_issued"],
+        "creator": video["creator"],
+        "rights": video["rights"],
+        "language": video["language"],
+        "subjects": get_subjects(video),
+        "source": video["source"],
+        "media": video["media"],
+    }
+
+
+def transform_youtube_intermediate(input_file: str, output_file: str) -> list[dict]:
+    """Filter the raw videos, convert them to the intermediate format and save them."""
+    videos = [
+        to_intermediate(video) for video in load_json(input_file) if is_valid(video)
+    ]
+    save_to_json(videos, output_file)
+    return videos
+
+
+def transform_youtube_final(input_file: str, output_file: str) -> list[dict]:
+    """Convert the intermediate videos to the final common format and save them."""
+    videos = [to_final(video) for video in load_json(input_file)]
     save_to_json(videos, output_file)
     return videos

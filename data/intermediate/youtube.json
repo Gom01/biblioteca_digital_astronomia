@@ -1,5 +1,33 @@
 [
   {
+    "identifier": "youtube-nCJQZHBkSsU",
+    "class": "dctype:MovingImage",
+    "title": "Progress 97 Cargo Ship Docking",
+    "description": "Watch the unpiloted Roscosmos Progress 97 resupply spacecraft approach the International Space Station after a two-day journey. The spacecraft will autonomously dock at 7:11 a.m. EST (1211 UTC).\n\nFor more than 25 years, people have lived and worked continuously aboard the International Space Station, advancing scientific knowledge and making research breakthroughs that aren’t possible on Earth.\n\nThe space station helps NASA understand and overcome the challenges of human spaceflight, expand commercial opportunities in low Earth orbit, and build on the foundation for long-duration missions to the Moon, as part of the Artemis program, and to Mars.\n\nLearn more about the International Space Station, its research, and crew at: https://www.nasa.gov/station",
+    "date_issued": "2026-11-26",
+    "date_created": "2026-11-26",
+    "creator": "NASA",
+    "publisher": "NASA (YouTube)",
+    "publisher_uri": "https://www.youtube.com/channel/UCLA_DiR1FfKNvjuUpBHmylQ",
+    "rights": "Standard YouTube License – Credit: NASA",
+    "language": "en",
+    "extent": "0:46:31",
+    "format": "Video (YouTube)",
+    "views": 23337,
+    "likes": 794,
+    "comments": null,
+    "stats_date": "2026-11-26",
+    "topics": [
+      "https://en.wikipedia.org/wiki/Society"
+    ],
+    "source": "https://www.youtube.com/watch?v=nCJQZHBkSsU",
+    "subjects": [],
+    "media": {
+      "ingester": "youtube",
+      "url": "https://www.youtube.com/watch?v=nCJQZHBkSsU"
+    }
+  },
+  {
     "identifier": "youtube-LwQMevphh10",
     "class": "dctype:MovingImage",
     "title": "Progress 97 Cargo Ship Launch",
@@ -13,10 +41,10 @@
     "language": "en",
     "extent": "0:33:09",
     "format": "Video (YouTube)",
-    "views": 57192,
-    "likes": 1107,
+    "views": 65172,
+    "likes": 1160,
     "comments": null,
-    "stats_date": "2026-11-25",
+    "stats_date": "2026-11-26",
     "topics": [
       "https://en.wikipedia.org/wiki/Society"
     ],
@@ -41,10 +69,10 @@
     "language": "en",
     "extent": "0:02:46",
     "format": "Video (YouTube)",
-    "views": 51497,
-    "likes": 1180,
+    "views": 60272,
+    "likes": 1335,
     "comments": null,
-    "stats_date": "2026-11-25",
+    "stats_date": "2026-11-26",
     "topics": [
       "https://en.wikipedia.org/wiki/Society"
     ],
@@ -59,7 +87,7 @@
     "identifier": "youtube-224QFgY9PTM",
     "class": "dctype:MovingImage",
     "title": "The Europa Concept (Official NASA+ Trailer)",
-    "description": "What mysteries await on Europa?\n\nThis moon of Jupiter has long been thought to potentially hold life beneath its icy surface. A new mission, Europa Clipper, is on its way to look for answers — but getting it there has required relentless innovation and overcoming extraordinary challenges.\n\nThe Europa Concept is coming to YouTube in December. Watch it now on NASA+: https://plus.nasa.gov/video/the-europa-concept/ \nLearn more about this documentary: https://nasa.gov/europaconcept",
+    "description": "What mysteries await on Europa?\n\nThis moon of Jupiter has long been thought to potentially hold life beneath its icy surface. A new mission, Europa Clipper, is on its way to look for answers — but getting it there has required relentless innovation and overcoming extraordinary challenges.\n\nThe Europa Concept is coming to YouTube in December. Watch it now on NASA+: https://plus.nasa.gov/video/the-europa-concept/ \nLearn more about this documentary: https://nasa.gov/europaconcept\n\nDownload this video: https://images.nasa.gov/details/The%20Europa%20Concept",
     "date_issued": "2026-11-23",
     "date_created": null,
     "creator": "NASA",
@@ -69,10 +97,10 @@
     "language": "en",
     "extent": "0:01:28",
     "format": "Video (YouTube)",
-    "views": 356971,
-    "likes": 9259,
+    "views": 873728,
+    "likes": 18858,
     "comments": null,
-    "stats_date": "2026-11-25",
+    "stats_date": "2026-11-26",
     "topics": [
       "https://en.wikipedia.org/wiki/Society"
     ],
@@ -97,10 +125,10 @@
     "language": "en",
     "extent": "0:45:16",
     "format": "Video (YouTube)",
-    "views": 77380,
-    "likes": 1141,
+    "views": 78304,
+    "likes": 1144,
     "comments": null,
-    "stats_date": "2026-11-25",
+    "stats_date": "2026-11-26",
     "topics": [
       "https://en.wikipedia.org/wiki/Society"
     ],
@@ -125,10 +153,10 @@
     "language": "en",
     "extent": "1:01:45",
     "format": "Video (YouTube)",
-    "views": 123684,
-    "likes": 2944,
+    "views": 124503,
+    "likes": 2952,
     "comments": null,
-    "stats_date": "2026-11-25",
+    "stats_date": "2026-11-26",
     "topics": [
       "https://en.wikipedia.org/wiki/Society"
     ],
@@ -153,10 +181,10 @@
     "language": "en",
     "extent": "0:01:04",
     "format": "Video (YouTube)",
-    "views": 85791,
-    "likes": 1826,
+    "views": 87698,
+    "likes": 1861,
     "comments": null,
-    "stats_date": "2026-11-25",
+    "stats_date": "2026-11-26",
     "topics": [
       "https://en.wikipedia.org/wiki/Society"
     ],
@@ -181,10 +209,10 @@
     "language": "en",
     "extent": "0:01:27",
     "format": "Video (YouTube)",
-    "views": 86020,
-    "likes": 1145,
+    "views": 86450,
+    "likes": 1151,
     "comments": null,
-    "stats_date": "2026-11-25",
+    "stats_date": "2026-11-26",
     "topics": [],
     "source": "https://www.youtube.com/watch?v=eXrd5sNdacA",
     "subjects": [],
@@ -207,10 +235,10 @@
     "language": "en",
     "extent": "1:36:00",
     "format": "Video (YouTube)",
-    "views": 179440,
-    "likes": 3205,
+    "views": 180299,
+    "likes": 3211,
     "comments": null,
-    "stats_date": "2026-11-25",
+    "stats_date": "2026-11-26",
     "topics": [
       "https://en.wikipedia.org/wiki/Society"
     ],
@@ -235,10 +263,10 @@
     "language": "en",
     "extent": "0:01:35",
     "format": "Video (YouTube)",
-    "views": 68466,
-    "likes": 1116,
+    "views": 69106,
+    "likes": 1130,
     "comments": null,
-    "stats_date": "2026-11-25",
+    "stats_date": "2026-11-26",
     "topics": [
       "https://en.wikipedia.org/wiki/Society"
     ],
@@ -263,10 +291,10 @@
     "language": "en",
     "extent": "0:01:04",
     "format": "Video (YouTube)",
-    "views": 68085,
-    "likes": 3306,
+    "views": 69834,
+    "likes": 3350,
     "comments": null,
-    "stats_date": "2026-11-25",
+    "stats_date": "2026-11-26",
     "topics": [
       "https://en.wikipedia.org/wiki/Knowledge"
     ],
@@ -291,10 +319,10 @@
     "language": "en",
     "extent": "0:01:05",
     "format": "Video (YouTube)",
-    "views": 445508,
-    "likes": 11224,
+    "views": 450530,
+    "likes": 11251,
     "comments": null,
-    "stats_date": "2026-11-25",
+    "stats_date": "2026-11-26",
     "topics": [],
     "source": "https://www.youtube.com/watch?v=61S764A-TKo",
     "subjects": [],
@@ -317,10 +345,10 @@
     "language": "en",
     "extent": "9:09:18",
     "format": "Video (YouTube)",
-    "views": 221171,
-    "likes": 3718,
+    "views": 221490,
+    "likes": 3722,
     "comments": null,
-    "stats_date": "2026-11-25",
+    "stats_date": "2026-11-26",
     "topics": [
       "https://en.wikipedia.org/wiki/Society"
     ],
@@ -345,10 +373,10 @@
     "language": "en",
     "extent": "0:33:51",
     "format": "Video (YouTube)",
-    "views": 64213,
-    "likes": 1096,
+    "views": 64300,
+    "likes": 1097,
     "comments": null,
-    "stats_date": "2026-11-25",
+    "stats_date": "2026-11-26",
     "topics": [
       "https://en.wikipedia.org/wiki/Society"
     ],
@@ -373,10 +401,10 @@
     "language": "en",
     "extent": "9:08:26",
     "format": "Video (YouTube)",
-    "views": 261623,
-    "likes": 4677,
+    "views": 261875,
+    "likes": 4678,
     "comments": null,
-    "stats_date": "2026-11-25",
+    "stats_date": "2026-11-26",
     "topics": [
       "https://en.wikipedia.org/wiki/Society"
     ],
@@ -401,10 +429,10 @@
     "language": "en",
     "extent": "2:05:15",
     "format": "Video (YouTube)",
-    "views": 251416,
+    "views": 251845,
     "likes": 4054,
     "comments": null,
-    "stats_date": "2026-11-25",
+    "stats_date": "2026-11-26",
     "topics": [
       "https://en.wikipedia.org/wiki/Society"
     ],
@@ -429,10 +457,10 @@
     "language": "en",
     "extent": "0:28:10",
     "format": "Video (YouTube)",
-    "views": 86389,
-    "likes": 1050,
+    "views": 86466,
+    "likes": 1049,
     "comments": null,
-    "stats_date": "2026-11-25",
+    "stats_date": "2026-11-26",
     "topics": [
       "https://en.wikipedia.org/wiki/Politics",
       "https://en.wikipedia.org/wiki/Society"
@@ -458,10 +486,10 @@
     "language": "en",
     "extent": "0:09:18",
     "format": "Video (YouTube)",
-    "views": 1076402,
-    "likes": 12453,
+    "views": 1077693,
+    "likes": 12467,
     "comments": null,
-    "stats_date": "2026-11-25",
+    "stats_date": "2026-11-26",
     "topics": [
       "https://en.wikipedia.org/wiki/Society"
     ],
@@ -486,10 +514,10 @@
     "language": "en",
     "extent": "0:39:56",
     "format": "Video (YouTube)",
-    "views": 97201,
+    "views": 97233,
     "likes": 1004,
     "comments": null,
-    "stats_date": "2026-11-25",
+    "stats_date": "2026-11-26",
     "topics": [
       "https://en.wikipedia.org/wiki/Society"
     ],
@@ -514,10 +542,10 @@
     "language": "en",
     "extent": "1:42:26",
     "format": "Video (YouTube)",
-    "views": 128808,
+    "views": 128855,
     "likes": 2002,
     "comments": null,
-    "stats_date": "2026-11-25",
+    "stats_date": "2026-11-26",
     "topics": [
       "https://en.wikipedia.org/wiki/Society"
     ],
@@ -542,10 +570,10 @@
     "language": "en",
     "extent": "0:20:15",
     "format": "Video (YouTube)",
-    "views": 701920,
-    "likes": 12112,
+    "views": 702140,
+    "likes": 12117,
     "comments": null,
-    "stats_date": "2026-11-25",
+    "stats_date": "2026-11-26",
     "topics": [
       "https://en.wikipedia.org/wiki/Knowledge"
     ],
@@ -570,10 +598,10 @@
     "language": "en",
     "extent": "0:49:17",
     "format": "Video (YouTube)",
-    "views": 172105,
-    "likes": 2390,
+    "views": 172148,
+    "likes": 2388,
     "comments": null,
-    "stats_date": "2026-11-25",
+    "stats_date": "2026-11-26",
     "topics": [
       "https://en.wikipedia.org/wiki/Society"
     ],
@@ -598,10 +626,10 @@
     "language": "en",
     "extent": "0:42:07",
     "format": "Video (YouTube)",
-    "views": 117904,
+    "views": 117912,
     "likes": 1458,
     "comments": null,
-    "stats_date": "2026-11-25",
+    "stats_date": "2026-11-26",
     "topics": [
       "https://en.wikipedia.org/wiki/Society"
     ],
@@ -626,10 +654,10 @@
     "language": "en",
     "extent": "2:19:07",
     "format": "Video (YouTube)",
-    "views": 518290,
-    "likes": 7657,
+    "views": 518387,
+    "likes": 7656,
     "comments": null,
-    "stats_date": "2026-11-25",
+    "stats_date": "2026-11-26",
     "topics": [
       "https://en.wikipedia.org/wiki/Society"
     ],
@@ -654,10 +682,10 @@
     "language": "en",
     "extent": "0:45:14",
     "format": "Video (YouTube)",
-    "views": 217426,
+    "views": 217442,
     "likes": 2295,
     "comments": null,
-    "stats_date": "2026-11-25",
+    "stats_date": "2026-11-26",
     "topics": [
       "https://en.wikipedia.org/wiki/Society"
     ],
@@ -682,10 +710,10 @@
     "language": "en",
     "extent": "0:38:44",
     "format": "Video (YouTube)",
-    "views": 123909,
+    "views": 123930,
     "likes": 1585,
     "comments": null,
-    "stats_date": "2026-11-25",
+    "stats_date": "2026-11-26",
     "topics": [
       "https://en.wikipedia.org/wiki/Society"
     ],
@@ -710,10 +738,10 @@
     "language": "en",
     "extent": "0:00:39",
     "format": "Video (YouTube)",
-    "views": 64313,
-    "likes": 1198,
+    "views": 64959,
+    "likes": 1205,
     "comments": null,
-    "stats_date": "2026-11-25",
+    "stats_date": "2026-11-26",
     "topics": [
       "https://en.wikipedia.org/wiki/Sport"
     ],
@@ -738,10 +766,10 @@
     "language": "en",
     "extent": "0:12:07",
     "format": "Video (YouTube)",
-    "views": 111615,
-    "likes": 1834,
+    "views": 111634,
+    "likes": 1833,
     "comments": null,
-    "stats_date": "2026-11-25",
+    "stats_date": "2026-11-26",
     "topics": [
       "https://en.wikipedia.org/wiki/Society"
     ],
@@ -766,10 +794,10 @@
     "language": "en",
     "extent": "4:32:18",
     "format": "Video (YouTube)",
-    "views": 343829,
+    "views": 343888,
     "likes": 4490,
     "comments": null,
-    "stats_date": "2026-11-25",
+    "stats_date": "2026-11-26",
     "topics": [
       "https://en.wikipedia.org/wiki/Society"
     ],
@@ -794,10 +822,10 @@
     "language": "en",
     "extent": "0:50:43",
     "format": "Video (YouTube)",
-    "views": 80412,
+    "views": 80420,
     "likes": 583,
     "comments": null,
-    "stats_date": "2026-11-25",
+    "stats_date": "2026-11-26",
     "topics": [
       "https://en.wikipedia.org/wiki/Politics",
       "https://en.wikipedia.org/wiki/Society"
@@ -823,10 +851,10 @@
     "language": "en",
     "extent": "2:23:32",
     "format": "Video (YouTube)",
-    "views": 658427,
-    "likes": 9214,
+    "views": 658618,
+    "likes": 9213,
     "comments": null,
-    "stats_date": "2026-11-25",
+    "stats_date": "2026-11-26",
     "topics": [
       "https://en.wikipedia.org/wiki/Society"
     ],
@@ -851,10 +879,10 @@
     "language": "en",
     "extent": "0:56:30",
     "format": "Video (YouTube)",
-    "views": 89552,
-    "likes": 1002,
+    "views": 89563,
+    "likes": 1003,
     "comments": null,
-    "stats_date": "2026-11-25",
+    "stats_date": "2026-11-26",
     "topics": [
       "https://en.wikipedia.org/wiki/Politics",
       "https://en.wikipedia.org/wiki/Society"
@@ -880,10 +908,10 @@
     "language": "en",
     "extent": "0:01:02",
     "format": "Video (YouTube)",
-    "views": 108618,
-    "likes": 1341,
+    "views": 108734,
+    "likes": 1343,
     "comments": null,
-    "stats_date": "2026-11-25",
+    "stats_date": "2026-11-26",
     "topics": [
       "https://en.wikipedia.org/wiki/Society"
     ],
@@ -908,10 +936,10 @@
     "language": "en",
     "extent": "1:00:11",
     "format": "Video (YouTube)",
-    "views": 104053,
-    "likes": 1525,
+    "views": 104063,
+    "likes": 1524,
     "comments": null,
-    "stats_date": "2026-11-25",
+    "stats_date": "2026-11-26",
     "topics": [
       "https://en.wikipedia.org/wiki/Society"
     ],
@@ -936,10 +964,10 @@
     "language": "en",
     "extent": "0:52:21",
     "format": "Video (YouTube)",
-    "views": 256111,
-    "likes": 1970,
+    "views": 256131,
+    "likes": 1969,
     "comments": null,
-    "stats_date": "2026-11-25",
+    "stats_date": "2026-11-26",
     "topics": [
       "https://en.wikipedia.org/wiki/Society"
     ],
@@ -964,10 +992,10 @@
     "language": "en",
     "extent": "0:30:40",
     "format": "Video (YouTube)",
-    "views": 105393,
-    "likes": 1527,
+    "views": 105404,
+    "likes": 1526,
     "comments": null,
-    "stats_date": "2026-11-25",
+    "stats_date": "2026-11-26",
     "topics": [
       "https://en.wikipedia.org/wiki/Society"
     ],
@@ -992,10 +1020,10 @@
     "language": "en",
     "extent": "0:32:00",
     "format": "Video (YouTube)",
-    "views": 137956,
+    "views": 137964,
     "likes": 2581,
     "comments": null,
-    "stats_date": "2026-11-25",
+    "stats_date": "2026-11-26",
     "topics": [
       "https://en.wikipedia.org/wiki/Society"
     ],
@@ -1020,10 +1048,10 @@
     "language": "en",
     "extent": "0:01:07",
     "format": "Video (YouTube)",
-    "views": 534755,
-    "likes": 9162,
+    "views": 535046,
+    "likes": 9167,
     "comments": null,
-    "stats_date": "2026-11-25",
+    "stats_date": "2026-11-26",
     "topics": [
       "https://en.wikipedia.org/wiki/Society"
     ],
@@ -1032,34 +1060,6 @@
     "media": {
       "ingester": "youtube",
       "url": "https://www.youtube.com/watch?v=IwZVXmQdX1E"
-    }
-  },
-  {
-    "identifier": "youtube-90Kgw_SvK4w",
-    "class": "dctype:MovingImage",
-    "title": "What It Takes",
-    "description": "NASA is advancing nuclear power and propulsion in space to accomplish President Trump’s national space objectives.\n\nWith SR-1 Freedom, launching in 2028, we will demonstrate nuclear electric propulsion and deliver SkyFall helicopters to Mars.\n\nIn collaboration with the U.S. Department of Energy, these capabilities are key to future missions to Mars and beyond.\n\nA new chapter of deep space exploration begins.\n\nCredit: NASA",
-    "date_issued": "2026-09-04",
-    "date_created": null,
-    "creator": "NASA",
-    "publisher": "NASA (YouTube)",
-    "publisher_uri": "https://www.youtube.com/channel/UCLA_DiR1FfKNvjuUpBHmylQ",
-    "rights": "Standard YouTube License – Credit: NASA",
-    "language": "en",
-    "extent": "0:02:32",
-    "format": "Video (YouTube)",
-    "views": 333254,
-    "likes": 8373,
-    "comments": null,
-    "stats_date": "2026-11-25",
-    "topics": [
-      "https://en.wikipedia.org/wiki/Society"
-    ],
-    "source": "https://www.youtube.com/watch?v=90Kgw_SvK4w",
-    "subjects": [],
-    "media": {
-      "ingester": "youtube",
-      "url": "https://www.youtube.com/watch?v=90Kgw_SvK4w"
     }
   }
 ]
